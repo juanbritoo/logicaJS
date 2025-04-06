@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.responsivevoice.org/responsivevoice.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@700&family=Inter:wght@400;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <title>Calculadora de IMC</title>
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="container__conteudo">
+            <div class="container__informacoes">
+                <div class="container__texto">
+                    <h1>Calcule o seu <span class="container__texto-azul">IMC</span></h1>
+                    <p class="texto__paragrafo">Digite abaixo suas informações de Peso e Altura</p>
+                </div>
+
+                <div class="campo">
+                    <label for="altura"> Insira sua Altura (em metros):</label>
+                    <input id="altura" step="0.01" min="0" class="container__input" placeholder="Ex.: 1.75">
+                </div>
+                <div class="campo">
+                    <label for="peso">Insira seu Peso (em Kg); </label>
+                    <input id="peso" type="number" min="0" class="container__input" placeholder="Ex.: 70">
+
+                </div>
+
+
+
+                <div class="chute container__botoes">
+                    <button onclick="verificarChute()" class="container__botao">Calcular IMC</button>
+                    <button onclick="reiniciarJogo()" id="reiniciar" class="container__botao" disabled>Refazer Cálculo</button>
+                </div>
+            </div>
+            <img src="./img/imcPeso.png.png " alt="Dois Jovens se olhando. Uma Sobrepeso e um malhado"
+                class="container__imagem-pessoa" />
+        </div>
+    </div>
+
+
+    <script src="app.js" defer></script>
+</body>
+
+</html>
