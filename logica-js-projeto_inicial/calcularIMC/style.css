@@ -13,7 +13,6 @@ body {
     justify-content: center;
 }
 
-
 body::before {
     background-image: url("img/code.png");
     background-repeat: no-repeat;
@@ -39,7 +38,6 @@ body::before {
     background-size: 100% 100%;
     position: relative;
 }
-
 
 .container__conteudo {
     display: flex;
@@ -92,12 +90,11 @@ body::before {
 
 h1 {
     font-family: 'Chakra Petch', sans-serif;
-    font-size: 72px;
-    padding-bottom: 3rem;
+    font-size: 70px;
+    padding-bottom: 0rem;
 }
 
-p,
-button {
+p, button {
     font-family: 'Inter', sans-serif;
 }
 
@@ -110,16 +107,29 @@ button:disabled {
     background-color: gray;
 }
 
-@media screen and (max-width: 1250px) {
 
+.campo label {
+    font-size: 24px;
+    font-weight: 700;
+    color: #ADD8E6;
+    font-family: 'Inter', sans-serif;
+}
+
+/* Ajuste nos campos de entrada */
+.campo input {
+    font-size: 20px;
+    padding: 16px;
+}
+
+@media screen and (max-width: 1250px) {
     h1 {
-        font-size: 50px;
+        font-size: 40px;
+        margin-top: 30px;
     }
 
     .container__botao {
         font-size: 16px;
     }
-
 
     .texto__paragrafo {
         font-size: 24px;
@@ -135,18 +145,18 @@ button:disabled {
     }
 
     .container__informacoes {
-        padding: 1rem
+        padding: 1rem;
     }
 
     .campo {
-        margin-bottom: 20px
+        margin-bottom: 20px;
     }
 
     label {
         display: block;
-        font-size: 18px;
+        font-size: 24px;
         font-weight: bold;
-        color: whi;
+        color: white;
         margin-bottom: 8px;
         font-family: 'Inter', sans-serif;
     }
