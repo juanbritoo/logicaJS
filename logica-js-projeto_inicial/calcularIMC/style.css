@@ -27,7 +27,7 @@ body::before {
 
 .container {
     width: 80%;
-    height: 80%;
+    height: 85%;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -36,19 +36,22 @@ body::before {
     box-shadow: 4px 4px 20px 0px rgba(1, 8, 14, 0.15);
     background-image: url("img/Ruido.png");
     background-size: 100% 100%;
-    position: relative;
+    position: static;
 }
 
 .container__conteudo {
+    width: 80%;
     display: flex;
     align-items: center;
     position: absolute;
     bottom: 0;
+    
+   
 }
 
 .container__informacoes {
     flex: 1;
-    padding: 3rem;
+    padding: 5rem;
 }
 
 .container__botao {
@@ -92,6 +95,7 @@ h1 {
     font-family: 'Chakra Petch', sans-serif;
     font-size: 70px;
     padding-bottom: 0rem;
+    display: flex;
 }
 
 p, button {
@@ -113,12 +117,13 @@ button:disabled {
     font-weight: 700;
     color: #ADD8E6;
     font-family: 'Inter', sans-serif;
-}
+    }
 
 /* Ajuste nos campos de entrada */
 .campo input {
     font-size: 20px;
     padding: 16px;
+    margin-top: 13px;
 }
 
 @media screen and (max-width: 1250px) {
