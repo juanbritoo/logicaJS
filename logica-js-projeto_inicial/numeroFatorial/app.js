@@ -23,6 +23,9 @@ function calcular() {
 }
 
 function calcularOutroNum() {
+    limparCampo();
+    document.getElementById('reiniciar').setAttribute('disabled', true);
+    exibirTextoNaTela('h1', 'Calcule outro número Fatorial' )
 
 }
 
