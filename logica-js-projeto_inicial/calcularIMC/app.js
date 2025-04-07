@@ -35,9 +35,9 @@ function exibirTextoNaTela(tag, texto) {
 }
 
 function limparCampo() {
-    let altura = document.getElementById('altura');
+    altura = document.getElementById('altura');
     altura.value = '';
-    let peso = document.getElementById('peso');
+    peso = document.getElementById('peso');
     peso.value = '';
 }
 
