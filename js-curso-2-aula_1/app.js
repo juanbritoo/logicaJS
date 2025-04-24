@@ -1,14 +1,38 @@
+let listaDeNumerosSorteados = [];
+let numeroLimite = 100;
 let numeroSecreto = gerarNumeroAleatorio();
 let tentativas = 1;
-//Função para gerar o número aleaatório
+//Função para gerar o número aleatório
 function gerarNumeroAleatorio() {
-    return parseInt(Math.random() * 100 + 1);
+    let numeroEscolhido = parseInt(Math.random() * numeroLimite + 1);
+    let quantidadeDeElementos = listaDeNumerosSorteados.length;
+    
+
+if (quantidadeDeElementos == numeroLimite) {
+    listaDeNumerosSorteados = [];
+}
+
+    if (listaDeNumerosSorteados.includes(numeroEscolhido)) {
+        return gerarNumeroAleatorio();
+    } else {
+        listaDeNumerosSorteados.push(numeroEscolhido);
+        console.log(listaDeNumerosSorteados);
+        return numeroEscolhido;
+    }
  }
 
  //Função para exibir texto na tela
 function exibirTextoNaTela(tag, texto) {
     let campo = document.querySelector(tag);
     campo.innerHTML = texto; 
+    if ('speechSynthesis' in window) {
+        let utterance = new SpeechSynthesisUtterance(texto);
+        utterance.lang = 'pt-BR'; 
+        utterance.rate = 1.2; 
+        window.speechSynthesis.speak(utterance); 
+    } else {
+        console.log("Web Speech API não suportada neste navegador.");
+    }
 }
 
 function limparCampo() {
